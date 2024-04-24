@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipies</title>
+</head>
+<style>
+    body{
+        background-image:url("recipe.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    ul{
+        color:white
+    }
+    h2{
+      color:orange
+    }
+    h1{
+        color: rgb(189, 36, 138)
+    }
+    #h11{
+        color: skyblue;
+        display: inline-block;
+        font-size: 280%;
+    }
+    p{
+        font-size: 18px;
+        color:silver;
+    }
+
+    a{
+        background-color: crimson;
+        color: white;
+        padding: 1%;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 1%;
+        display: inline-block;
+    }
+    #mealcart{
+
+        margin-bottom:3%;
+    }
+    button{
+        background-color: chartreuse;
+        color: black;
+        border-radius: 5px;
+        padding: 1%;
+        margin-left: 80%;
+
+    }
+</style>
+<body>
+
+    
+     <center><h1 id="h11">Here is your recipe</h1></center>
+     
+    <div id="mealcart">
+
+    </div>
+    
+    <script>
+        var t=document.getElementsByTagName("button")
+        var mealrecipie = document.getElementById("mealcart")
+        var b = JSON.parse(window.localStorage.getItem("keyss"))
+        console.log(b)
+
+        let html=""
+                    if (b && b.length > 0) {
+                        const meal = b[0];
+                        // Display recipe details
+                        html += `<div id="recipe">
+                            <h1>${meal.strMeal}</h1>
+                            <h2 id="a">Ingredients</h2>
+                            <ul id="b">`;
+                // Loop through ingredients
+                for (let i = 1; i <= 20; i++) { // Assuming maximum 20 ingredients
+                    const ingredient = meal['strIngredient' + i];
+                    const measure = meal['strMeasure' + i];
+                    if (ingredient && ingredient.trim() !== '') {
+                        html += `<li>${measure ? measure.trim() + ' ' : ''}${ingredient.trim()}</li>`;
+                    }
+                }
+                html += `   </ul>
+                            <h2>Recipe</h2>
+                            <p>${meal.strInstructions}</p>
+                            <div class = "recipe-link">
+            <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
+            <button>Go BACK..!</button>
+        </div>
+
+                        </div>`;
+            } else {
+                html = "<p>Recipe not found!</p>";
+            }
+            mealrecipie.innerHTML = html;
+
+            t[0].addEventListener("click",()=>{
+                window.history.back("index.html")
+            })
+            
+
+
+
+
+    </script>
+</body>
+</html>

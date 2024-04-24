@@ -1,0 +1,169 @@
+input {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    width: 60%; /* Adjust width for smaller screens */
+    background-color: #F3D7CA;
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(237, 113, 113);
+    border-radius: 10px;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+input:hover{
+
+    border: 3px solid brown;
+    color: black;
+}
+button:hover{
+    background-color: coral;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#mealCart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+}
+.meal-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 220px;
+    background-color:transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+.meal-item:hover{
+    width:200px ;
+
+}
+.meal-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.meal-item h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: white;
+    font-family: oblique;
+}
+.meal-item a {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.meal-item a:hover {
+    background-color: darkorange;
+}
+body{
+    background-image:url("https://img5.goodfon.com/wallpaper/nbig/2/7f/natiurmort-kompozitsiia-eda-temnyi-fon-posuda-iagody-keksy-v.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipies{
+   width:70%;
+   height:300px ;
+   margin-left: 20%;
+   position: relative;
+
+}
+#recipie{
+    width: 100px;
+    position: absolute;
+    top:5px;
+    left:20px;
+    right:20px;
+    background-color: pink;
+    border: 2px solid black;
+}
+p{
+    color: white;
+    font-size: 19px;
+    text-align: justify;
+}
+#hh{
+    height: 200px;
+}
+
+h1{
+    font-size: 55px;
+    color:silver;
+}
+#a{
+    color:skyblue
+}
+
+#b{
+    color: pink;
+}
+.recipe-link a{
+
+    text-decoration: none;
+    color:white;
+    background-color: crimson;
+    padding:8px;
+    border-radius: 5px;
+
+}
+ul li{
+    color: silver;
+    font-size: 25px;
+    
+}
+.footer {
+    background-color:silver;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 1600px;
+    
+  }
+  
+  .footer a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+/* For small screens */
+@media screen and (max-width: 768px) {
+    input {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+
+/* For larger screens */
+@media screen and (min-width: 1200px) {
+    input {
+        width: 40%; /* Adjust width for larger screens */
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+@media screen and (max-width: 768px) {
+    button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+}
